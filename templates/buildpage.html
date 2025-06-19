@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    />
+
+    <title>Super Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#1a1a1a] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#363636] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">MouseCraft</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Shop</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Build</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Community</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Support</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#363636] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              onclick="window.location.href='/cart'"
+            >
+              <span class="truncate">Cart</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAj_Ocv3dpXaQdPWY-N3iD3JxO1jKfOutT10nWSXPlYtXSjbYvNrY8oAz5aLaC-tHTn1zCdmyEWn1OoknPCasRiCQAUwvuHllOZIVLfWYfQ7h02vBpAlO5cdxhxM1kfHMeZIInaWeWsQ8qXQ5GPg5W8gZ5hFl1sGGU_shzoVIPwNrc1uXET0u_D0QMSXpEyEv5uzdX3HBW90l6cw1F3dO05ev5unBW4KY615BvSZnac8QrOLsYLPynV_fj2jlY6cvNGcDZ_VdN4BrCB");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap gap-2 p-4">
+              <a class="text-[#adadad] text-base font-medium leading-normal" href="#">Build</a>
+              <span class="text-[#adadad] text-base font-medium leading-normal">/</span>
+              <span class="text-white text-base font-medium leading-normal">Mouse</span>
+            </div>
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Build your mouse</p></div>
+            <div class="pb-3">
+              <div class="flex border-b border-[#4d4d4d] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-black text-white pb-[13px] pt-4" href="#">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Base Model</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#adadad] pb-[13px] pt-4" href="#">
+                  <p class="text-[#adadad] text-sm font-bold leading-normal tracking-[0.015em]">Components</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#adadad] pb-[13px] pt-4" href="#">
+                  <p class="text-[#adadad] text-sm font-bold leading-normal tracking-[0.015em]">Parameters</p>
+                </a>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Select your base model</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Starting at $129</p>
+                    <p class="text-white text-base font-bold leading-tight">Model X</p>
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Ergonomic design with customizable buttons and high-precision sensor.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#363636] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Select</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARW3Yf1th8FVglHC3UdhA2W83AfQg1d-xBzP2Kg9CeSbrbFzb48Vz_jRSeSC0Exel1DjJMHzp4lQLGlCrBAHpz4swmoLDmVj0tkEeEsoPCTbYADFVe_9Lo-SbKY7zuZADj_pR8EKFY8URr4b7t8pcfSZqlTN0TDeVMd44q7oWYONn1-rXnd6ZseIGkzjmQAlrGwfNippOQQ2km4SnT7UQWrGJP0k0Fj3-hSF5v3xkQZ4si8rMpm9RmqHKlAUMRDM1F4JSlgZW04-CX");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Starting at $149</p>
+                    <p class="text-white text-base font-bold leading-tight">Model Y</p>
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Lightweight construction with adjustable weight system and swappable side grips.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#363636] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Select</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVOPGwQ8JY-VO8fIKiusDyHA1-PCVVGNHZdtI5Rn-RJEFSbSOuUeMXffZzh6r4UbgpXqHcPMfxCaJNi0UZmdMCcTbNHee0hsHEPrhBuu_E127D4vVtC11jdWPvyuijsvYOdLarSn4WtdyhlyENQq7HJnI-uCymM_ASDcXx1HJC-neAOxmHUDYvRBELOlVN9__7WEAiqYvKelsQNPLw0E9zlnbrFPXiqpBw75jS6qNCkOSCxSEOMOLifmGPmw3W9K1-ud8MZ7jfZC_3");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Starting at $169</p>
+                    <p class="text-white text-base font-bold leading-tight">Model Z</p>
+                    <p class="text-[#adadad] text-sm font-normal leading-normal">Ambidextrous design with customizable RGB lighting and advanced sensor technology.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#363636] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Select</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHlngNu_fvA36AjJO9144W059ugbjAimU2skuvtvlbMQnhIpbLzYimXqnzvXKRcgd9oxQeOqNMkZiu1-zQAcLrg9sW9vlbvYdotxBWSG9rLyZFj8HGSdyYlzGj80IOmAHO1M-B_urR4NjlYSNIxTMRpCZ6_3uRg5ZEgfO-SNaOoDc-xWoIu8LU9ATUtH0iLGdaG-Xh9s0bvSUJM67CSb0oMNCB8akAzYq-fLkE2k6amy4Rtw0IQgGovn6KvchvoXKej82zCQ9NY-a8");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-end">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#363636] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Save Draft</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-black text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Next: Components</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
