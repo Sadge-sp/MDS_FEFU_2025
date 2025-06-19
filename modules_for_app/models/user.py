@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from sqlalchemy.ext.declarative import declarative_base
 from werkzeug.security import generate_password_hash,  check_password_hash
@@ -18,10 +19,14 @@ class User(Base):
     password_hash= Column(String(255), nullable=False)
     is_email_verified = Column(Boolean, default=False)
     is_phone_verified = Column(Boolean, default=False)
-    created_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()))
-    updated_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()), onupdate=func.timezone('UTC', func.now()))
+    subscriptions = Column(Boolean, default=False)
     reset_token = Column(String(255), nullable=True)
     reset_token_expires_at = Column(DateTime, nullable=True)
+    image_url = Column(String(50),nullable=True)
+
+    created_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()))
+    updated_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()), onupdate=func.timezone('UTC', func.now()))
+
 
     def __repr__(self):
         return f"<User id={self.id} username='{self.username}' email='{self.masked_email()}'>"
@@ -37,3 +42,9 @@ class User(Base):
             return None
         name, domain = self.email.split("@")
         return f"{name[:2]}****@{domain}"
+
+    mouse_configurations = relationship("MouseConfiguration", back_populates="user")
+    orders = relationship("Order", back_populates="user")
+    reviews = relationship("Review", back_populates="user")
+
+

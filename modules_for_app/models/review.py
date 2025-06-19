@@ -2,25 +2,28 @@ from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text, CheckCo
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from sqlalchemy.ext.declarative import declarative_base
-from werkzeug.security import generate_password_hash,  check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 Base = declarative_base()
 GLOBAL_SALT = os.getenv("GLOBAL_SALT")
-class category(Base):
-    __tablename__ = 'categories'  # название таблицы в БД
+
+
+class review(Base):
+    __tablename__ = 'reviews'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(50), nullable=False)
-    description= Column(Text, nullable=False)
-    image_url = Column(String(255), nullable=False)
-
+    comment = Column(Text, nullable=False)
+    rating = Column(Integer, CheckConstraint('rating  >= 0 AND rating  <= 10'))
 
     created_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()))
     updated_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()),
                         onupdate=func.timezone('UTC', func.now()))
 
-
-    products = relationship("product", back_populates="category")
+    product_id = Column(Integer, ForeignKey('products.id'))
+    user_id = Column(Integer, ForeignKey('users.id'))
+    product = relationship("product", back_populates="reviews")
+    user = relationship("User", back_populates="reviews")

@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a97a6b-04f4-43e8-938d-50dda4da62df" name="Changes" comment="pup">
-      <change afterPath="$PROJECT_DIR$/modules_for_app/models/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/DesktopAppFile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/MouseConfiguration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/OS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/orderitem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/promotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules_for_app/models/review.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules_for_app/models/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules_for_app/models/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules_for_app/models/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules_for_app/models/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules_for_app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules_for_app/models/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750311983102</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pup">
+      <option name="closed" value="true" />
+      <created>1750312231656</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750312231656</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
