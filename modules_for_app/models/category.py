@@ -9,22 +9,19 @@ load_dotenv()
 
 Base = declarative_base()
 GLOBAL_SALT = os.getenv("GLOBAL_SALT")
-class product(Base):
-    __tablename__ = 'products'  # название таблицы в БД
+class category(Base):
+    __tablename__ = 'categories'  # название таблицы в БД
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50), unique=True, nullable=False)
     description= Column(Text, nullable=False)
     price= Column(Integer,CheckConstraint('price >= 1 AND price <= 999999') , primary_key=True)
     image_url = Column(String(50), nullable=False)
-    stock = Column(Integer,CheckConstraint('stock>= 0 AND stock> <= 99999999') , primary_key=True)
-    rating = Column(Integer,CheckConstraint('rating  >= 0 AND rating  <= 10') , primary_key=True)
+
 
     created_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()))
     updated_at = Column(DateTime(timezone=True), server_default=func.timezone('UTC', func.now()),
                         onupdate=func.timezone('UTC', func.now()))
 
 
-    category_id= Column(Integer, ForeignKey('category.id'))
-    reviews = relationship("review", back_populates="products")
-    order_items = relationship("orderitem", back_populates="products")
+    products = relationship("product", back_populates="categories")
